@@ -1,0 +1,310 @@
+
+:root {
+    --main-color : #0d6efd;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.home {
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.home .caption h1 {
+    font-size: 4.5rem;
+    
+}
+.home .caption h1::after {
+    content: "|";
+    font-size: 2.5rem;
+    display: block;
+    margin-top: 1.5rem;
+    animation: typeeraser 8s 1s infinite alternate;
+}
+
+
+@keyframes typeeraser {
+    0% {  content: "|"; }
+    3% {  content: "D|"; }
+    6% {  content: "De|"; }
+    9% {  content: "Des|"; }
+    12% {  content: "Desi|"; }
+    15% {  content: "Desig|"; }
+    18% {  content: "Design|"; }
+    21% {  content: "Designe|"; }
+    24% {  content: "Designer |"; }
+    27% {  content: "Designe|"; }
+   30% {  content: "Design|"; }
+   33% {  content: "Desig|"; }
+   36% {  content: "Desi|"; }
+   39% {  content: "Des|"; }
+   42% {  content: "De|"; }
+   45% {  content: "D|"; }
+   48% {  content: "|"; }
+   51% {  content: "D|"; }
+   54% {  content: "De|"; }
+   57% {  content: "Dev|"; }
+   60% {  content: "Deve|"; }
+   63% {  content: "Devel|"; }
+   66% {  content: "Develo|"; }
+   69% {  content: "Develop|"; }
+   72% {  content: "Develope|"; }
+   75% {  content: "Developer |"; }
+   78% {  content: "Develope|"; }
+   81% {  content: "Develop|"; }
+   84% {  content: "Develo|"; }
+   87% {  content: "Devel|"; }
+   90% {  content: "Deve|"; }
+   93% {  content: "Dev|"; }
+   96% {  content: "De|"; }
+   98% {  content: "D|"; }
+   100% {  content: "|"; }
+    
+}
+
+
+.home .caption p {
+    font-size: 2.5rem;
+}
+
+.home .overlay {
+    background-color: rgba(0,0,0,0.5);
+}
+
+header nav {
+    background-color: #040404;
+}
+
+header nav .navbar-brand {
+    font-size: 1.75rem;
+}
+header nav .nav-link {
+    position: relative;
+}
+
+header nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: 0;
+    left: 0;
+    transition: 0.6s;
+}
+header nav .nav-link.active::after {
+    width: 100%;
+}
+header nav .nav-link:hover::after {
+    width: 80%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;  
+}
+.modal .modal-header i {
+    cursor: pointer;
+}
+.modal .modal-body .nav-item .nav-link
+{
+    transition: 0.5s;
+}
+.modal .modal-body .nav-item:hover .nav-link {
+    color: var(--main-color) !important;
+}
+
+
+
+
+
+
+
+
+:root:has(input#openModal:checked) .openModal {
+       display: none;
+}
+:root:has(input#openModal:checked) .collapse:not(.show) {
+    display: block;
+}
+:root:has(input#closeModal:checked) .collapse:not(.show) {
+    display: none;
+}
+
+
+.header:after {
+    content: " ";
+    position: absolute;
+    width: 18%;
+    height: 3px;
+   background-color: var(--main-color);
+    bottom: 0;
+}
+
+.services .header::after , 
+.portfolio .header::after , 
+.blog .header::after,
+.contact  .header::after {
+
+    width: 10% !important;
+}
+
+.about .progress {
+    height: 0.7rem !important;
+}
+.services .service-icon , .st-icon{
+    width: 60px;
+    height: 60px;
+}
+.st-icon {
+    outline: 10px  solid #CDE1F8;
+
+
+}
+.services .service-icon {
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+    outline: none;
+    border-width: 8px !important;
+}
+
+.service:hover .service-icon {
+    background-color: var(--main-color);
+    color: white;
+    border-width: 0px !important;
+    /* box-shadow: 0px 0px  10px 10px rgba(0, 0, 0, 0.2); */
+    outline: 8px  solid #CDE1F8;
+
+
+}
+.satistics , .carousel-cont {
+     background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.satistics {
+    
+    background-image: url(../images/counters-bg.jpg);
+   
+}
+.carousel-cont {
+    background-image: url(../images/overlay-bg.jpg);
+}
+
+.portfolio .port-icon {
+    width: 50px;
+    height: 50px;
+}
+.portfolio .port-item img {
+    transition: 0.5s;
+    cursor: pointer;
+}
+.portfolio .port-item:hover  img {
+    transform: scale(1.5);
+}
+
+
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+.blog .card-footer img{
+    width: 35px;
+    height: 35px;
+}
+.blog .card a {
+    transition: 0.5s;
+}
+.blog .card a:hover {
+    color: var(--main-color) !important;
+}
+
+
+
+.touch .touch-icons li {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+
+}
+.touch .touch-icons li:hover {
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 0px 5px #CDE1F8;
+}
+.touch .touch-icons li i {
+    transition: 0.5s;
+
+}
+.touch .touch-icons li:hover i {
+    color: white !important;
+}
+
+
+.contact {
+    background-image: linear-gradient(rgba(13, 110, 253,0.7) , rgba(13, 110, 253,0.7)) , url(../images/overlay-bg.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: 0 solid; 
+    border-right: 0 solid transparent;
+    border-bottom: 0;
+    border-left: 0 solid transparent;
+}
+nav .nav-item:nth-child(5) .dropdown-toggle:hover+.dropdown-menu {
+    display: block;
+} 
+nav .nav-item:nth-child(5) .second.dropdown-toggle:hover+.dropdown-menu { 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+nav .nav-item:nth-child(5) .second+.dropdown-menu:hover {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.nav-item:nth-child(5) .dropdown-menu:hover {
+    display: block;
+}
+
+
+.scroll-top {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+/* navbar on small screen */

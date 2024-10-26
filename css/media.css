@@ -1,0 +1,76 @@
+:root {
+    --main-color : #0d6efd;
+}
+
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size : 14px;
+    }
+    .collapse:not(.show) {
+    display: block;
+    background-color: rgba(128, 128, 128,0.4);
+    position: fixed;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 20000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: none;
+    }
+.collapse:not(.show) .navbar-nav  {
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    padding-top: 1.5rem;
+
+}
+.collapse:not(.show) .close-icon {
+    width: 90%;
+    padding-top: 1.5rem;
+
+
+}
+.collapse:not(.show) .close-icon i {
+    cursor: pointer;
+
+}
+.collapse:not(.show) .navbar-nav a {
+    color: black !important;
+}
+.collapse:not(.show) .navbar-nav li:hover> a {
+    color: var(--main-color) !important;
+
+}
+.collapse:not(.show) .navbar-nav li {
+    margin-bottom: 1.2rem;
+}
+header nav .nav-link::after {
+    display: none;
+}
+
+
+.collapse:not(.show) .nav-link.active{
+    color: var(--main-color) !important;
+}
+    
+  
+    
+    
+}
+@media screen and (min-width: 992px) { 
+     .navModal .modal-header label {
+        display: none;
+    }
+    .modal-dialog {
+        top: 15px;
+    }
+ 
+    
+}
